@@ -1,1 +1,1 @@
-web_statics-project
+web static

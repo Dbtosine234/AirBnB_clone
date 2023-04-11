@@ -550,7 +550,7 @@ must be between double quotes **")
                 else:
                     print('** no instance found **')
 
-elif arg[0:9] == '.destroy(':
+        elif arg[0:9] == '.destroy(':
             if arg[-1] != ')':
                 return cmd.Cmd.default(self, line)
             else:
@@ -698,7 +698,7 @@ must be between double quotes **")
                 objects.append(value)
 
         if arg in HBNBCommand.dotcmds:
-result = [value.__str__() for value in objects]
+            result = [value.__str__() for value in objects]
             if arg == HBNBCommand.dotcmds[0]:
                 print(result)
             elif arg == HBNBCommand.dotcmds[1]:
@@ -813,7 +813,7 @@ space must be between double quotes **")
                 attr = args_list[1]
                 value = args_list[2]
 
-if attr in oob:
+                if attr in oob:
                     print('** attribute can\'t be updated **')
                     return
                 """
@@ -918,7 +918,7 @@ must be between double quotes **")
                     print('** attribute name missing **')
                     return
                 else:
-# clear whitespaces around arguments
+                    # clear whitespaces around arguments
                     i = 0
                     while (i < len(args_list)):
                         while(args_list[i][0] == " "):
@@ -1059,7 +1059,7 @@ must be between double quotes **")
 
         elif arg[0:9] == '.destroy(':
             if arg[-1] != ')':
-return cmd.Cmd.default(self, line)
+                return cmd.Cmd.default(self, line)
             else:
                 model_id = arg[9:-1]
                 if model_id == '':
@@ -1173,7 +1173,7 @@ must be between double quotes **")
                             print("** A string argument with a space \
 must be between double quotes **")
                             return
-try:
+                    try:
                         for c in value:
                             if c == '.':
                                 value = float(value)
@@ -1294,7 +1294,7 @@ strings **")
                                 value = value[1:-1]
 
                             else:
-for c in value:
+                                for c in value:
                                     if c == " ":
                                         print("** A string argument with a \
 space must be between double quotes **")
